@@ -28,6 +28,7 @@ $course = new Course( //OBJETO
         "Laravel al Ataque: Rutas, Controladores y Vistas", 
         "Eloquent y Bases de Datos: Magia con Modelos",
      ],
+        type: CourseType::VIP,
 );
 
 //OBJETO A PARTIR DE UNA CLASE

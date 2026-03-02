@@ -1,9 +1,10 @@
 <?php 
 
+require_once 'courseType.php';
 //INFORMACIÓN PRINCIPAL
 class Course { //CLASE
 
-    //AHORA, se especifica que es una propiedad publica y su tipo de valor
+    //AHORA, se especifica que es una propiedad rotegida y su tipo de valor
     public function __construct(//CONSTRUCTOR
         //PROPIEDADES
         protected string $title,
@@ -12,8 +13,8 @@ class Course { //CLASE
         protected array $lenguajes,
         protected array $cursos,
         protected array $lecciones,
+        protected CourseType $type = CourseType::FREE,
         protected ?Autor $autor = null,
-
     ) {
         //
     }
@@ -45,7 +46,7 @@ class Course { //CLASE
         $html = "<div class='card'>";
 
         // TITULOS
-        $html .= "<h1>Bienvenido al {$this->title}</h1>";
+        $html .= "<h1>Bienvenido al {$this->title} - {$this->type->label()}</h1>";
         $html .= "<h2>{$this->subtitle}</h2>";
         $html .= "<p class='descripcion'>{$this->description}</p>";
 

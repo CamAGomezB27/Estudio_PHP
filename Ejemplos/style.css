@@ -1,0 +1,170 @@
+body {
+        font-family: 'Courier New', Courier, monospace;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        /*fondo gradiente */
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    h1 {
+        margin-top: 0;
+        text-align: center;
+        color: #333;
+font-weight: bold;
+font-size: 3rem;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: auto;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    li {
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+
+    .descripcion,
+    .nivel,
+    .datos {
+        text-align: center;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        max-width: 1000px;
+        margin: auto;
+        border-radius: 40px;
+        /* Borde redondo*/
+        box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.8);
+        /* Caja detras del contenedor que simula sombra*/
+    }
+
+    .fecha {
+        color: red;
+        font: 2rem bold;
+        margin-top: 10px;
+        /* Margen respecto a la cabecera*/
+    }
+
+    .precio {
+        color: green;
+        font: 2rem bold;
+        margin-top: 10px;
+        /* Margen respecto a la cabecera*/
+    }
+
+    .nuevos {
+        margin-top: -30px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        /* Espacio entre si */
+        gap: 2rem;
+    }
+
+    .estado {
+        text-align: center;
+        font: 2rem bold;
+        border-radius: 20px;
+        /* Borde redondo*/
+    }
+
+    .estado-activo {
+        background-color: green;
+        color: black;
+    }
+
+    .estado-archivado {
+        background-color: red;
+        color: white;
+    }
+
+    .etiq,
+    .cursos {
+        color: #333;
+        font: 2rem bold;
+        flex: 1;
+        /* ambas clases ocupan el mismo espacio*/
+    }
+
+    .etiq>p,
+    .cursos>p {
+        text-align: center;
+        /* funciona de este modo ya que p es hijo de las clases directas*/
+    }
+
+    .list {
+        cursor: pointer;
+        /* Se activa la manito */
+        font-size: small;
+    }
+
+    .etiq>ul>li {
+        /* li hijo de ul hijo de la clase padre . */
+        color: red;
+    }
+
+    .cursos>ul>li {
+        /* li hijo de ul hijo de la clase padre . */
+        color: blue;
+    }
+
+    .leccionesT {
+        color: #333;
+        font: 2rem bold;
+        text-align: center;
+    }
+
+    .lecciones>ul>li {
+        /* li hijo de ul hijo de la clase padre . */
+        color: blueviolet;
+        text-align: center;
+        list-style: none;
+        font-size: large;
+    }
+
+    .sectionCre {
+        background-color: #f5f5f5;
+        border-top: 2px solid #ccc;
+        border-radius: 0 0 10px 10px;
+        padding: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .creditos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* Espacio entre si */
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .creditosT {
+        text-align: center;
+        margin: 10px;
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        font-family: 'Georgia', serif;
+        text-transform: uppercase;
+    }
+
+    .creditos p {
+        text-align: center;
+        margin: 0;
+        color: #555;
+        font-family: 'Georgia', serif;
+        font-size: 1rem;
+    }

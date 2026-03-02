@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'courseType.php';
+namespace Estudio_PHP;
 //INFORMACIÓN PRINCIPAL
 class Course { //CLASE
 
@@ -134,7 +134,7 @@ class Autor { //CLASE
     public function __construct(//CONSTRUCTOR
             //PROPIEDADES
             protected string $name,
-            protected DateTime $fecha,
+            protected \DateTimeInterface $fecha,
             protected string $ubicacion,
             protected Course $course
         ) {

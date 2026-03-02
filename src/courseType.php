@@ -1,5 +1,7 @@
 <?php  
 
+namespace Estudio_PHP;
+
     enum CourseType: string {
         case FREE = 'Gratis';
         case PAID = 'Pago';

@@ -1,6 +1,10 @@
 <?php 
 
-require_once 'course.php';
+require __DIR__ . '/vendor/autoload.php';
+
+use Estudio_PHP\Course;
+use Estudio_PHP\CourseType;
+use Estudio_PHP\Autor;  
 
 //INSTANCIA
 $course = new Course( //OBJETO
@@ -37,7 +41,7 @@ $course = new Course( //OBJETO
 //INSTANCIA
 $Autor = new Autor( //OBJETO
     name: "Camilo Gómez",
-    fecha: new DateTime('now'),
+        fecha: new \DateTime('now'),    // clase nativa
     ubicacion: "Bogotá. Colombia.",
     course: $course
 );

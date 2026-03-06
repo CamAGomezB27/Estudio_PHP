@@ -5,7 +5,7 @@ $fecha_publicacion = "13 de julio de 2025"; //Fecha
 $mensaje = "Este curso no solo te enseñará PHP… te enseñará a pensar como backend, dominar Laravel, y construir aplicaciones sólidas, seguras y escalables. Ideal para quienes quieren ir más allá de copiar y pegar código."; //mensaje
 $archivado = false; //True or false
 
-$status = $archivado ? "archvido" : "activo"; //Operador ternario
+$status = $archivado ? "archvido" : "activo"; //Operador ternario.
 
 $nivel = 2;
 

@@ -1,7 +1,7 @@
 <?php 
 
 //INFORMACIÓN PRINCIPAL
-class Course { //CLASE
+class Course { //CLASE.
 
     //AHORA, se especifica que es una propiedad publica y su tipo de valor
     public function __construct(//CONSTRUCTOR

@@ -1,6 +1,6 @@
 <?php 
 
-//INFORMACIÓN PRINCIPAL
+//INFORMACIÓN PRINCIPAL.
 $course = [
     'title' => 'Curso profesional de PHP y Laravel',
     'subtitle' => 'Aprende facilmente PHP y Laravel desde cero 😁',

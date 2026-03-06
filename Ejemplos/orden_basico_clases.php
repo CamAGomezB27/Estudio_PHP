@@ -3,7 +3,7 @@
 require_once 'course.php';
 
 //INSTANCIA
-$course = new Course( //OBJETO
+$course = new Course( //OBJETO.
     'Curso profesional de PHP y Laravel',
     'Aprende facilmente PHP y Laravel desde cero 😁',
     'Este curso no solo te enseñará PHP, te enseñará a pensar como backend, dominar Laravel, y construir aplicaciones sólidas, seguras y escalables. Ideal para quienes quieren ir más allá de copiar y pegar código.',

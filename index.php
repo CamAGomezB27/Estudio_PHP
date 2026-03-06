@@ -43,7 +43,7 @@ $Autor = new Autor( //OBJETO
     name: "Camilo Gómez",
         fecha: new \DateTime('now'),    // clase nativa
     ubicacion: "Bogotá. Colombia.",
-    course: $course
+    Course: $course
 );
 
 $course->setAutor($Autor);

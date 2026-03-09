@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+echo 'Ask anything to IA:' . PHP_EOL;
+
+while (true) {
+    $input = readline('> ');
+
+    if ($input === 'exit' || $input === '') {
+        break;
+    }
+
+    echo 'Thinking...' . PHP_EOL;
+
+    sleep(2); // Simulate processing time
+
+    if (strtolower($input) === 'hola') {
+        echo 'IA responde: Hola! Como te encuentras hoy?' . PHP_EOL;
+    } elseif (strtolower($input) === 'necesito ayuda') {
+        echo 'IA responde: Claro! ¿En qué puedo ayudarte?' . PHP_EOL;
+    } else {
+        echo 'IA responde: No entiendo esa pregunta, pero estoy aquí para ayudarte.' . PHP_EOL;
+    }
+
+    // echo 'IA response to: ' . $input . PHP_EOL;
+}

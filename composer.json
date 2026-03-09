@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "Estudio_PHP\\": "src/"
+            "App\\": "src/"
         }
     }
 }

@@ -1,22 +1,26 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-
-use App\FakeAiService;
-
-$aiService = new FakeAiService();
-
 echo 'Ask anything to IA:' . PHP_EOL;
 
 while (true) {
     $input = readline('> ');
 
-    if (strtolower($input) === 'exit' || $input === '' || strtolower($input) === 'gracias') {
+    if ($input === 'exit' || $input === '') {
         break;
     }
 
-    $response = $aiService->getResponse($input);
+    echo 'Thinking...' . PHP_EOL;
 
-    echo $response . PHP_EOL;
+    sleep(2); // Simulate processing time
+
+    if (strtolower($input) === 'hola') {
+        echo 'IA responde: Hola! Como te encuentras hoy?' . PHP_EOL;
+    } elseif (strtolower($input) === 'necesito ayuda') {
+        echo 'IA responde: Claro! ¿En qué puedo ayudarte?' . PHP_EOL;
+    } else {
+        echo 'IA responde: No entiendo esa pregunta, pero estoy aquí para ayudarte.' . PHP_EOL;
+    }
+
+    // echo 'IA response to: ' . $input . PHP_EOL;
 }

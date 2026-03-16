@@ -4,7 +4,7 @@ namespace App;
 
 use OpenAI;
 
-class OpenIAService
+class OpenIAService implements IAServiceInterface
 {
     protected $client;
 

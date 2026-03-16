@@ -5,8 +5,4 @@ require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// $aiService = new App\OpenIAService;
-$aiService = new App\OllamaAiService();
-// $aiService = new App\FakeAiService;
-
 return new App\Chat($aiService);

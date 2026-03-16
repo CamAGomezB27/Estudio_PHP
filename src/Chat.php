@@ -5,7 +5,7 @@ namespace App;
 class Chat
 {
     public function __construct(
-        private OllamaAiService $aiService
+        private IAServiceInterface $aiService
     )
     {} 
     public function start()

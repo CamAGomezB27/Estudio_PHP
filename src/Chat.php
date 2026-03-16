@@ -17,7 +17,7 @@ class Chat
                 break;
             } 
 
-            $response = $this->aiService->getResponse($input);
+            $response = $this->getResponse($input);
 
             $this->output($response);
         }
@@ -41,5 +41,10 @@ class Chat
     private function output($response)
     {
         echo 'IA: ' . $response . PHP_EOL;
+    }
+
+    public function getResponse($question)
+    {
+        return $this->aiService->getResponse($question);
     }
 }

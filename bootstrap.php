@@ -8,3 +8,5 @@ $dotenv->load();
 // $aiService = new App\OpenIAService;
 $aiService = new App\OllamaAiService();
 // $aiService = new App\FakeAiService;
+
+return new App\Chat($aiService);

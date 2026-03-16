@@ -4,9 +4,9 @@ namespace App;
 
 //.. Aquí podrías implementar una clase que simule una IA, por ejemplo, respondiendo a preguntas comunes o generando respuestas aleatorias.
 
-class FakeAiService
+class FakeAiService implements IAServiceInterface
 {
-    public function getResponse($question)
+    public function getResponse($question): string
     {
         echo 'Thinking...' . PHP_EOL;
 

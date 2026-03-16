@@ -5,23 +5,41 @@ namespace App;
 class Chat
 {
     public function __construct(
-        private OllamaAiService $aiService
-    )
-    {} 
+        private IAServiceInterface $aiService
+    ) {} 
     public function start()
     {
-        echo 'Preguntale a la IA:' . PHP_EOL;
-
-        while (true) {
-            $input = readline('> ');
-
-            if (strtolower($input) === 'exit' || $input === '' || strtolower($input) === 'gracias') {
+        $this -> welcome();
+        
+        while ($input = $this->prompt()) {
+    
+            if ($this->exit($input)) {
                 break;
             } 
 
             $response = $this->aiService->getResponse($input);
 
-            echo $response . PHP_EOL;
+            $this->output($response);
         }
+    }
+    
+    private function welcome()
+    {
+        echo 'Preguntale a la IA:' . PHP_EOL;
+    }
+
+    private function prompt()
+    {
+        return readline('-> ');
+    }
+
+    private function exit($input)
+    {
+        return in_array(trim(strtolower($input)), ['exit', 'salir', 'gracias']);
+    }
+
+    private function output($response)
+    {
+        echo 'IA: ' . $response . PHP_EOL;
     }
 }

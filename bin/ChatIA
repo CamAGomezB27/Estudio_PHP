@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use App\OpenIAService;
+
+$aiService = new OpenIAService();
+
+echo 'Ask anything to IA:' . PHP_EOL;
+
+while (true) {
+    $input = readline('> ');
+
+    if (strtolower($input) === 'exit' || $input === '' || strtolower($input) === 'gracias') {
+        break;
+    }
+
+    $response = $aiService->getResponse($input);
+
+    echo $response . PHP_EOL;
+}

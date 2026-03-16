@@ -3,6 +3,12 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+$dototEnv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dototEnv->load();
+
+// var_dump($_ENV['MESSAGE']);
+
+
 use App\OpenIAService;
 
 $aiService = new OpenIAService();
